@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Balwer Studio | Links</title>
+  <meta name="description" content="الروابط الرسمية لـ Balwer Studio — Digital Product Studio.">
+  <meta name="theme-color" content="#061A3A">
+
+  <link rel="icon" href="assets/balwer-logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    :root{
+      --navy:#061A3A;
+      --navy2:#0B2543;
+      --teal:#0E9EAA;
+      --cyan:#22D3EE;
+      --paper:#F7FBFC;
+      --soft:#EDF7F8;
+      --white:#FFFFFF;
+      --muted:#6F8393;
+      --line:#DCE8EC;
+      --shadow:0 14px 36px rgba(6,26,58,.08);
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      padding:42px 18px;
+      position:relative;
+      isolation:isolate;
+      overflow-x:hidden;
+      font-family:"Alexandria",sans-serif;
+      color:var(--navy);
+      background:linear-gradient(180deg,#FFFFFF 0%,#F7FBFC 100%);
+    }
+
+    .wrap{
+      width:min(760px,100%);
+      margin:auto;
+      position:relative;
+      z-index:1;
+    }
+
+    .brand{
+      text-align:center;
+      margin-bottom:32px;
+      animation:fadeUp .7s ease both;
+    }
+
+    .logo{
+      width:82px;
+      height:82px;
+      margin:0 auto 18px;
+      padding:5px;
+      border-radius:23px;
+      background:#fff;
+      box-shadow:0 15px 40px rgba(6,26,58,.10);
+      border:1px solid #E6EFF2;
+      animation:logoFloat 4s ease-in-out infinite;
+      will-change:transform;
+    }
+
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:18px;
+      display:block;
+    }
+
+    h1{
+      margin:0;
+      font-family:"Sora",sans-serif;
+      font-size:34px;
+      letter-spacing:-1.2px;
+      color:var(--navy);
+    }
+
+    .type{
+      margin-top:7px;
+      direction:ltr;
+      font-family:"Sora",sans-serif;
+      color:var(--teal);
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .tagline{
+      margin:18px auto 0;
+      font-size:18px;
+      font-weight:600;
+      line-height:1.7;
+      color:#17344E;
+    }
+
+    .motto{
+      margin-top:9px;
+      direction:ltr;
+      font-family:"Sora",sans-serif;
+      color:var(--teal);
+      font-size:9px;
+      letter-spacing:2px;
+      font-weight:700;
+    }
+
+    .join{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      position:relative;
+      overflow:hidden;
+      text-decoration:none;
+      color:#fff;
+      background:linear-gradient(135deg,#087F8B 0%,var(--teal) 45%,#18B6C1 100%);
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:20px;
+      padding:20px 21px;
+      margin:0 0 14px;
+      box-shadow:0 14px 30px rgba(14,158,170,.18);
+      transition:transform .24s ease,box-shadow .24s ease,filter .24s ease;
+      animation:fadeUp .7s .08s ease both;
+    }
+
+    .join::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:radial-gradient(circle at 15% 15%,rgba(255,255,255,.18),transparent 28%);
+      pointer-events:none;
+    }
+
+    .join::after{
+      content:"";
+      position:absolute;
+      top:-20%;
+      left:-30%;
+      width:28%;
+      height:140%;
+      background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);
+      transform:skewX(-18deg);
+      animation:shimmer 4.8s ease-in-out infinite;
+      pointer-events:none;
+    }
+
+    .join:hover{
+      transform:translateY(-3px);
+      filter:saturate(1.05);
+      box-shadow:0 21px 44px rgba(14,158,170,.27);
+    }
+
+    .join:focus-visible,
+    .card:focus-visible{
+      outline:3px solid rgba(34,211,238,.32);
+      outline-offset:3px;
+    }
+
+    .join small{
+      display:block;
+      margin-bottom:5px;
+      direction:ltr;
+      font-family:"Sora",sans-serif;
+      font-size:9px;
+      letter-spacing:1.5px;
+      opacity:.86;
+    }
+
+    .join strong{
+      display:block;
+      position:relative;
+      z-index:1;
+      font-size:17px;
+    }
+
+    .join .join-arrow{
+      position:relative;
+      z-index:1;
+      direction:ltr;
+      font-family:"Sora",sans-serif;
+      font-size:20px;
+      transition:transform .22s ease;
+    }
+
+    .join:hover .join-arrow{transform:translate(-2px,-2px) scale(1.05)}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:11px;
+    }
+
+    .card{
+      --platform:14,158,170;
+      min-height:92px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:15px;
+      position:relative;
+      overflow:hidden;
+      text-decoration:none;
+      color:var(--navy);
+      background:rgba(255,255,255,.91);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:15px 16px;
+      box-shadow:0 7px 24px rgba(6,26,58,.035);
+      opacity:0;
+      animation:fadeUp .6s ease forwards;
+      transition:transform .24s ease,background .24s ease,border-color .24s ease,box-shadow .24s ease;
+      -webkit-backdrop-filter:blur(8px);
+      backdrop-filter:blur(8px);
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:auto -25% -75% -25%;
+      height:110px;
+      background:radial-gradient(circle,rgba(var(--platform),.12),transparent 66%);
+      opacity:0;
+      transition:opacity .24s ease;
+      pointer-events:none;
+    }
+
+    .card:hover{
+      transform:translateY(-3px);
+      background:#fff;
+      border-color:rgba(var(--platform),.28);
+      box-shadow:0 17px 38px rgba(6,26,58,.09),0 0 0 1px rgba(var(--platform),.035);
+    }
+
+    .card:hover::before{opacity:1}
+
+    .left{
+      display:flex;
+      align-items:center;
+      gap:13px;
+      min-width:0;
+      position:relative;
+      z-index:1;
+    }
+
+    .icon{
+      width:45px;
+      height:45px;
+      flex:0 0 45px;
+      display:grid;
+      place-items:center;
+      border-radius:14px;
+      color:var(--teal);
+      background:linear-gradient(180deg,#EEFBF9 0%,var(--soft) 100%);
+      border:1px solid #D7ECEF;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.60);
+      transition:transform .24s ease,color .24s ease,background .24s ease,border-color .24s ease,box-shadow .24s ease;
+    }
+
+    .icon i{
+      font-size:21px;
+      line-height:1;
+      transition:transform .24s ease,color .24s ease,background .24s ease;
+    }
+
+    .card:hover .icon{
+      transform:scale(1.07) rotate(-2deg);
+      color:rgb(var(--platform));
+      background:rgba(var(--platform),.075);
+      border-color:rgba(var(--platform),.18);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.72),0 6px 16px rgba(var(--platform),.10);
+    }
+
+    .card:hover .icon i{transform:scale(1.04)}
+
+    .card.instagram:hover .icon i{
+      background:linear-gradient(135deg,#FEDA75 0%,#FA7E1E 25%,#D62976 52%,#962FBF 76%,#4F5BD5 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      color:transparent;
+    }
+
+    .text{min-width:0}
+
+    .name{
+      direction:ltr;
+      text-align:left;
+      font-family:"Sora",sans-serif;
+      font-size:13px;
+      font-weight:700;
+      color:var(--navy);
+    }
+
+    .sub{
+      margin-top:4px;
+      direction:ltr;
+      text-align:left;
+      color:var(--muted);
+      font-family:"Sora",sans-serif;
+      font-size:9px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+    }
+
+    .arrow{
+      position:relative;
+      z-index:1;
+      direction:ltr;
+      color:var(--teal);
+      font-family:"Sora",sans-serif;
+      font-size:15px;
+      transition:transform .22s ease,color .22s ease;
+    }
+
+    .card:hover .arrow{
+      color:rgb(var(--platform));
+      transform:translate(-2px,-2px);
+    }
+
+    .whatsapp{--platform:37,211,102}
+    .email{--platform:14,158,170}
+    .instagram{--platform:214,41,118}
+    .linkedin{--platform:10,102,194}
+    .facebook{--platform:24,119,242}
+    .twitter{--platform:15,20,25}
+    .github{--platform:24,23,23}
+
+    .card:nth-child(1){animation-delay:.16s}
+    .card:nth-child(2){animation-delay:.22s}
+    .card:nth-child(3){animation-delay:.28s}
+    .card:nth-child(4){animation-delay:.34s}
+    .card:nth-child(5){animation-delay:.40s}
+    .card:nth-child(6){animation-delay:.46s}
+    .card:nth-child(7){animation-delay:.52s}
+
+    footer{
+      margin-top:30px;
+      direction:ltr;
+      text-align:center;
+      color:var(--muted);
+      font-family:"Sora",sans-serif;
+      font-size:9px;
+      line-height:1.8;
+      animation:fadeUp .7s .6s ease both;
+    }
+
+    footer b{
+      display:block;
+      margin-bottom:3px;
+      color:var(--navy);
+      font-size:11px;
+    }
+
+    /* Ambient background */
+    .ambient-bg{
+      position:fixed;
+      inset:0;
+      z-index:-3;
+      overflow:hidden;
+      pointer-events:none;
+    }
+
+    .ambient-bg::before{
+      content:"";
+      position:absolute;
+      inset:-15%;
+      background-image:
+        linear-gradient(rgba(6,26,58,.022) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(6,26,58,.022) 1px,transparent 1px);
+      background-size:46px 46px;
+      opacity:.36;
+      animation:gridMove 20s linear infinite;
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,.72),transparent 92%);
+      -webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,.72),transparent 92%);
+    }
+
+    .orb{
+      position:absolute;
+      border-radius:50%;
+      filter:blur(14px);
+      opacity:.34;
+      will-change:transform;
+    }
+
+    .orb-1{
+      width:360px;
+      height:360px;
+      top:-110px;
+      left:-90px;
+      background:radial-gradient(circle,rgba(34,211,238,.28) 0%,rgba(34,211,238,.10) 48%,transparent 72%);
+      animation:floatOrb1 14s ease-in-out infinite;
+    }
+
+    .orb-2{
+      width:420px;
+      height:420px;
+      right:-160px;
+      top:32%;
+      background:radial-gradient(circle,rgba(14,158,170,.20) 0%,rgba(14,158,170,.08) 48%,transparent 72%);
+      animation:floatOrb2 18s ease-in-out infinite;
+    }
+
+    .orb-3{
+      width:300px;
+      height:300px;
+      left:18%;
+      bottom:-130px;
+      background:radial-gradient(circle,rgba(34,211,238,.18) 0%,rgba(34,211,238,.06) 50%,transparent 72%);
+      animation:floatOrb3 16s ease-in-out infinite;
+    }
+
+    .beam{
+      position:absolute;
+      width:560px;
+      height:120px;
+      top:18%;
+      left:50%;
+      transform:translateX(-50%) rotate(-10deg);
+      background:linear-gradient(90deg,transparent,rgba(34,211,238,.05),transparent);
+      filter:blur(12px);
+      animation:beamDrift 11s ease-in-out infinite;
+    }
+
+    /* Mouse-follow light */
+    .cursor-glow{
+      position:fixed;
+      left:0;
+      top:0;
+      width:430px;
+      height:430px;
+      z-index:-2;
+      border-radius:50%;
+      pointer-events:none;
+      opacity:0;
+      background:radial-gradient(circle,rgba(34,211,238,.115) 0%,rgba(14,158,170,.055) 28%,transparent 68%);
+      filter:blur(4px);
+      transform:translate3d(calc(var(--mouse-x,50vw) - 50%),calc(var(--mouse-y,50vh) - 50%),0);
+      transition:opacity .35s ease;
+      will-change:transform;
+    }
+
+    body.has-pointer .cursor-glow{opacity:1}
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(14px)}
+      to{opacity:1;transform:translateY(0)}
+    }
+
+    @keyframes logoFloat{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-5px)}
+    }
+
+    @keyframes shimmer{
+      0%{transform:translateX(-140%) skewX(-18deg)}
+      60%,100%{transform:translateX(180%) skewX(-18deg)}
+    }
+
+    @keyframes gridMove{
+      from{transform:translate3d(0,0,0)}
+      to{transform:translate3d(46px,46px,0)}
+    }
+
+    @keyframes floatOrb1{
+      0%,100%{transform:translate3d(0,0,0) scale(1)}
+      50%{transform:translate3d(75px,45px,0) scale(1.08)}
+    }
+
+    @keyframes floatOrb2{
+      0%,100%{transform:translate3d(0,0,0) scale(1)}
+      50%{transform:translate3d(-90px,-55px,0) scale(1.05)}
+    }
+
+    @keyframes floatOrb3{
+      0%,100%{transform:translate3d(0,0,0) scale(1)}
+      50%{transform:translate3d(110px,-45px,0) scale(.95)}
+    }
+
+    @keyframes beamDrift{
+      0%,100%{transform:translateX(-57%) rotate(-10deg);opacity:.32}
+      50%{transform:translateX(-43%) rotate(-7deg);opacity:.55}
+    }
+
+    @media(max-width:620px){
+      body{padding:28px 14px 24px}
+      .brand{margin-bottom:25px}
+      .logo{width:76px;height:76px;margin-bottom:15px}
+      h1{font-size:30px}
+      .type{font-size:11px;margin-top:6px}
+      .tagline{font-size:16px;margin-top:14px;line-height:1.65}
+      .motto{font-size:8px;letter-spacing:1.65px}
+
+      .join{
+        min-height:76px;
+        padding:16px 17px;
+        border-radius:17px;
+        margin-bottom:10px;
+      }
+      .join strong{font-size:15px}
+      .join small{font-size:8px;letter-spacing:1.2px}
+      .join .join-arrow{font-size:18px}
+
+      .grid{grid-template-columns:1fr;gap:9px}
+      .card{min-height:78px;padding:12px 13px;border-radius:16px}
+      .left{gap:12px}
+      .icon{width:48px;height:48px;flex-basis:48px;border-radius:14px}
+      .icon i{font-size:22px}
+      .name{font-size:14px}
+      .sub{font-size:10px;margin-top:3px}
+      .arrow{font-size:14px}
+
+      .orb-1{width:270px;height:270px}
+      .orb-2{width:310px;height:310px}
+      .orb-3{width:230px;height:230px}
+      .ambient-bg::before{background-size:38px 38px;opacity:.28}
+      .cursor-glow{display:none}
+      footer{margin-top:24px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      .brand,
+      .logo,
+      .join,
+      .join::after,
+      .card,
+      footer,
+      .ambient-bg::before,
+      .orb,
+      .beam{
+        animation:none !important;
+      }
+
+      .card{opacity:1}
+      .cursor-glow{display:none}
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="ambient-bg" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+    <span class="beam"></span>
+  </div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <main class="wrap">
+
+    <header class="brand">
+      <div class="logo">
+        <img src="assets/balwer-logo.png" alt="Balwer Studio">
+      </div>
+
+      <h1>Balwer Studio</h1>
+      <div class="type">Digital Product Studio</div>
+
+      <div class="tagline">
+        نحوّل الأفكار إلى منتجات رقمية قابلة للنمو.
+      </div>
+
+      <div class="motto">DESIGN • DEVELOP • GROW</div>
+    </header>
+
+    <a class="join" href="https://tally.so/r/68YENP" target="_blank" rel="noopener">
+      <div>
+        <small>OPEN MEMBERSHIP • APPLY NOW</small>
+        <strong>انضم إلى مجتمع Balwer Studio</strong>
+      </div>
+      <span class="join-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
+    </a>
+
+    <section class="grid">
+
+      <a class="card whatsapp" href="https://wa.me/970592417370" target="_blank" rel="noopener" aria-label="WhatsApp - Talk to Balwer Studio">
+        <div class="left">
+          <div class="icon">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+          </div>
+          <div class="text">
+            <div class="name">WhatsApp</div>
+            <div class="sub">Talk to Balwer Studio</div>
+          </div>
+        </div>
+        <div class="arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></div>
+      </a>
+
+      <a class="card email" href="mailto:balwerstudio@gmail.com" aria-label="Email Balwer Studio">
+        <div class="left">
+          <div class="icon">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          </div>
+          <div class="text">
+            <div class="name">Email</div>
+            <div class="sub">balwerstudio@gmail.com</div>
+          </div>
+        </div>
+        <div class="arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></div>
+      </a>
+
+      <a class="card instagram" href="https://www.instagram.com/balwerstudio/" target="_blank" rel="noopener" aria-label="Balwer Studio on Instagram">
+        <div class="left">
+          <div class="icon">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </div>
+          <div class="text">
+            <div class="name">Instagram</div>
+            <div class="sub">@balwerstudio</div>
+          </div>
+        </div>
+        <div class="arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></div>
+      </a>
+
+      <a class="card linkedin" href="https://www.linkedin.com/company/balwer-studio/" target="_blank" rel="noopener" aria-label="Balwer Studio on LinkedIn">
+        <div class="left">
+          <div class="icon">
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </div>
+          <div class="text">
+            <div class="name">LinkedIn</div>
+            <div class="sub">Balwer Studio</div>
+          </div>
+        </div>
+        <div class="arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></div>
+      </a>
+
+      <a class="card facebook" href="https://www.facebook.com/balwerstudio" target="_blank" rel="noopener" aria-label="Balwer Studio on Facebook">
+        <div class="left">
+          <div class="icon">
+            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          </div>
+          <div class="text">
+            <div class="name">Facebook</div>
+            <div class="sub">Balwer Studio</div>
+          </div>
+        </div>
+        <div class="arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></div>
+      </a>
+
+      <a class="card twitter" href="https://x.com/balwerstudio" target="_blank" rel="noopener" aria-label="Balwer Studio on X">
+        <div class="left">
+          <div class="icon">
+            <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+          </div>
+          <div class="text">
+            <div class="name">X / Twitter</div>
+            <div class="sub">@balwerstudio</div>
+          </div>
+        </div>
+        <div class="arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></div>
+      </a>
+
+      <a class="card github" href="https://github.com/BalwerStudio" target="_blank" rel="noopener" aria-label="Balwer Studio on GitHub">
+        <div class="left">
+          <div class="icon">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </div>
+          <div class="text">
+            <div class="name">GitHub</div>
+            <div class="sub">BalwerStudio</div>
+          </div>
+        </div>
+        <div class="arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></div>
+      </a>
+
+    </section>
+
+    <footer>
+      <b>Balwer Studio</b>
+      DESIGN • DEVELOP • GROW
+    </footer>
+
+  </main>
+
+  <script>
+    const finePointer = window.matchMedia('(pointer:fine)').matches;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (finePointer && !reduceMotion) {
+      const logo = document.querySelector('.logo');
+      document.body.classList.add('has-pointer');
+
+      document.addEventListener('mousemove', (e) => {
+        document.documentElement.style.setProperty('--mouse-x', `${e.clientX}px`);
+        document.documentElement.style.setProperty('--mouse-y', `${e.clientY}px`);
+
+        if (logo) {
+          const x = (e.clientX / window.innerWidth - 0.5) * 3;
+          const y = (e.clientY / window.innerHeight - 0.5) * 3;
+          logo.style.translate = `${x}px ${y}px`;
+        }
+      }, { passive:true });
+    }
+  </script>
+
+</body>
+</html>
