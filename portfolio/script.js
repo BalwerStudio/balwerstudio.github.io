@@ -113,6 +113,15 @@ if (!inCaseStudy) {
   replaceWithRealImage('.project-card.mrreel .project-visual', `${assetBase}mrreel.b64`, 'Mr’Reel Arabic AI product interface presentation.');
   replaceWithRealImage('.project-card.startech .project-visual', `${assetBase}startech.b64`, 'STARTECH hotspot service visual and identity.');
   replaceWithRealImage('.project-card.balwer .project-visual', `${assetBase}balwer.b64`, 'Balwer Studio responsive website case-study presentation.');
+
+  document.querySelectorAll('a[href="cv.html"]').forEach(link => {
+    link.href = 'assets/Ahmad_Yaser_Sammour_CV.pdf';
+    link.setAttribute('download', 'Ahmad_Yaser_Sammour_CV.pdf');
+    link.removeAttribute('target');
+    if (link.textContent.includes('View CV')) {
+      link.textContent = 'Download CV';
+    }
+  });
 }
 
 if (document.body.classList.contains('mrreel-case')) {
