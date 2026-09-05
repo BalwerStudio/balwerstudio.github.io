@@ -1,0 +1,12 @@
+/* Real project visual overrides */
+.real-project-image{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:20px;box-shadow:0 24px 70px rgba(35,35,45,.10);transition:transform .35s ease,box-shadow .35s ease}
+.project-card:hover .real-project-image{transform:scale(1.012);box-shadow:0 30px 85px rgba(35,35,45,.13)}
+.project-card.mrreel .project-visual,.project-card.balwer .project-visual,.project-card.startech .project-visual{padding:22px}
+.project-card.mrreel .project-visual{background:linear-gradient(135deg,#f1efff,#fff0f7 60%,#eef3ff)}
+.project-card.balwer .project-visual{background:linear-gradient(135deg,#eaf6f5,#f8fbfb)}
+.project-card.startech .project-visual{background:linear-gradient(145deg,#f6f0e5,#e8f4ef)}
+.real-case-cover{min-height:auto!important;padding:28px!important;display:block!important}
+.case-real-image{display:block;width:100%;height:auto;border-radius:24px;box-shadow:0 28px 80px rgba(42,42,55,.10)}
+.st-cover.real-case-cover{background:linear-gradient(145deg,#f6f0e5,#dff5ed)!important}
+.bw-cover.real-case-cover{background:linear-gradient(145deg,#eaf6f5,#f8fbfb)!important}
+@media(max-width:760px){.project-card.mrreel .project-visual,.project-card.balwer .project-visual,.project-card.startech .project-visual{padding:14px}.real-project-image,.case-real-image{border-radius:16px}.real-case-cover{padding:14px!important}}
