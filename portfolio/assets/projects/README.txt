@@ -1,1 +1,0 @@
-Project images are stored as binary Git blobs and referenced by the portfolio pages.
