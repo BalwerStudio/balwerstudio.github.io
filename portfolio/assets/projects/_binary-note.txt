@@ -1,1 +1,0 @@
-Binary image files are attached through Git objects; this marker can be removed later.
